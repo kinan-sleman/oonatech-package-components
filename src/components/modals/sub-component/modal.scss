@@ -1,0 +1,372 @@
+// .modal {
+//   pointer-events: none;
+//   position: fixed;
+//   inset: 0px;
+//   margin: 0px;
+//   display: grid;
+//   height: 100%;
+//   max-height: none;
+//   width: 100%;
+//   max-width: none;
+//   justify-items: center;
+//   padding: 0px;
+//   opacity: 0;
+//   overscroll-behavior: contain;
+//   overscroll-behavior: contain;
+//   z-index: 999;
+//   background-color: white;
+//   // border: 1px solid red;
+//   color: inherit;
+//   transition-duration: 200ms;
+//   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+//   transition-property: transform, opacity, visibility;
+//   overflow-y: hidden;
+//   transition: 0.4s;
+// }
+// :where(.modal) {
+//   align-items: center;
+// }
+// .modal-open,
+// .modal:target,
+// .modal-toggle:checked + .modal,
+// .modal[open] {
+//   pointer-events: auto;
+//   visibility: visible;
+//   opacity: 1;
+//   transition: 0.4s;
+// }
+// .modal-open,
+// .modal:target,
+// .modal-toggle:checked + .modal,
+// .modal[open] {
+//   pointer-events: auto;
+//   visibility: visible;
+//   opacity: 1;
+//   transition: 0.4s;
+// }
+// .modal-open,
+// .modal:target,
+// .modal-toggle:checked + .modal,
+// .modal[open] {
+//   pointer-events: auto;
+//   visibility: visible;
+//   opacity: 1;
+//   transition: 0.4s;
+// }
+// :root:has(
+//     :is(
+//         .modal-open,
+//         .modal:target,
+//         .modal-toggle:checked + .modal,
+//         .modal[open]
+//       )
+//   ) {
+//   overflow: hidden;
+//   transition: 0.4s;
+// }
+// :root:has(
+//     :is(
+//         .modal-open,
+//         .modal:target,
+//         .modal-toggle:checked + .modal,
+//         .modal[open]
+//       )
+//   ) {
+//   overflow: hidden;
+//   transition: 0.4s;
+// }
+// :root:has(
+//     :is(
+//         .modal-open,
+//         .modal:target,
+//         .modal-toggle:checked + .modal,
+//         .modal[open]
+//       )
+//   ) {
+//   overflow: hidden;
+// }
+// .modal:not(dialog:not(.modal-open)),
+// .modal::backdrop {
+//   background-color: #0006;
+//   animation: modal-pop 0.2s ease-out;
+//   transition: 0.4s;
+// }
+// .modal:not(dialog:not(.modal-open)),
+// .modal::backdrop {
+//   background-color: #0006;
+//   animation: modal-pop 0.2s ease-out;
+//   transition: 0.4s;
+// }
+// .modal-open .modal-box,
+// .modal-toggle:checked + .modal .modal-box,
+// .modal:target .modal-box,
+// .modal[open] .modal-box {
+//   --tw-translate-y: 0px;
+//   --tw-scale-x: 1;
+//   --tw-scale-y: 1;
+//   transition: 0.4s;
+//   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+//     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+//     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+// }
+// .modal-open .modal-box,
+// .modal-toggle:checked + .modal .modal-box,
+// .modal:target .modal-box,
+// .modal[open] .modal-box {
+//   --tw-translate-y: 0px;
+//   --tw-scale-x: 1;
+//   --tw-scale-y: 1;
+//   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+//     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+//     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+//   transition: 0.4s;
+// }
+// .modal-open .modal-box,
+// .modal-toggle:checked + .modal .modal-box,
+// .modal:target .modal-box,
+// .modal[open] .modal-box {
+//   --tw-translate-y: 0px;
+//   --tw-scale-x: 1;
+//   --tw-scale-y: 1;
+//   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+//     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+//     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+//   transition: 0.4s;
+// }
+// .modal {
+//   .modal-box {
+//     background-color: white;
+//     border-radius: 10px;
+//     box-shadow: 0px 4px 12px 0px #0000001a;
+
+//     // overflow-y: initial !important;
+//     @media (max-width: 600px) {
+//       width: 460px !important;
+//       min-width: 460px !important;
+//     }
+//     .selected-value {
+//       @media (max-width: 570px) {
+//         width: 90%;
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: center;
+//         gap: 10px;
+//         flex-wrap: wrap;
+//         font-size: 13px;
+//         font-weight: 400;
+//       }
+//     }
+//     .content-selcted {
+//       @media (max-width: 570px) {
+//         height: 100% !important;
+//       }
+//     }
+//   }
+
+//   .upload-box {
+//     width: 100%;
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//     margin-bottom: 5px;
+//     .wraper-drag {
+//       min-width: 204px;
+//       .Supported {
+//         font-size: 13px;
+//         font-weight: 400;
+//         line-height: 18px;
+//         text-align: left;
+//         color: #a4a4a4;
+//         margin-top: 3px;
+//       }
+//     }
+//     .drag-box {
+//       height: 171px;
+//       border-radius: 7px;
+//       border: 1px dashed #1bbbff;
+//       background-color: #e9f8ff;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       justify-content: center;
+//       transition: all 0.3s ease;
+//       &:hover {
+//         box-shadow: 0px -2px 20px 0px #1bbbff59;
+//       }
+//       .uplaod-vidoe {
+//         font-size: 12px;
+//         font-weight: 400;
+//         line-height: 24px;
+//         text-align: center;
+//         .btn {
+//           color: #253368;
+//           border-bottom: 1px solid #253368;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//     .status-upload {
+//       text-align: center;
+//       display: flex;
+//       justify-content: flex-start;
+//       align-items: center;
+//       flex-direction: column;
+//       height: 100%;
+//       min-height: 174px;
+//       width: 100%;
+//       .content {
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: center;
+//         gap: 10px;
+//         text-align: center;
+//         width: 100%;
+//         margin-bottom: 15px;
+//         span {
+//           flex: 1;
+//           color: #333232;
+//           font-weight: 400;
+//         }
+//       }
+//       .status-box {
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: center;
+//         gap: 10px;
+//         width: 100%;
+//         margin-bottom: 10px;
+//         animation: slide-up 0.5s ease-in-out forwards;
+//         .name-File {
+//           color: #939393;
+//           white-space: nowrap; /* Prevent wrapping */
+//           overflow: hidden; /* Hide excess content */
+//           text-overflow: ellipsis; /* Add ellipsis (...) for truncation */
+//           /* Adjust these properties for desired truncation behavior */
+//           max-width: 225px;
+//           min-width: 225px;
+//           font-size: 15px;
+//         }
+//         .success {
+//           color: #04b440;
+//           font-size: 13px;
+//           font-weight: 400;
+//           line-height: 18px;
+//           text-align: center;
+//         }
+//         .faild {
+//           color: #e41d1d;
+//           font-size: 13px;
+//           font-weight: 400;
+//           line-height: 18px;
+//           text-align: center;
+//         }
+//         progress {
+//           transition: width 1s ease-in-out;
+//         }
+//       }
+//     }
+//   }
+
+//   @keyframes slide-up {
+//     from {
+//       transform: translateY(100%); /* Start from 100% below the viewport */
+//     }
+//     to {
+//       transform: translateY(0); /* End at its normal position */
+//     }
+//   }
+
+//   .header-modal {
+//     position: relative;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     h6 {
+//       // font-family: SansSerif;
+//       font-size: 16px;
+//       font-weight: 500;
+//       line-height: 23px;
+//       letter-spacing: 0px;
+//       text-align: center;
+//       color: #333232;
+//     }
+//   }
+
+//   .header-popUp-hr-top {
+//     width: 108%;
+//     height: 1;
+//     background-color: #fff;
+//     margin-left: 0;
+//     position: absolute;
+//     left: -25px;
+//     top: 53px;
+//   }
+//   .header-popUp-hr {
+//     width: 108%;
+//     height: 1;
+//     background-color: #fff;
+//     margin-left: 0;
+//     position: absolute;
+//     left: -25px;
+//   }
+// }
+// .iconCose {
+//   transition: all 0.3s ease;
+//   cursor: pointer;
+
+//   &:hover {
+//     svg {
+//       path:first-of-type {
+//         color: red;
+//         fill: red;
+//         stroke: red;
+//       }
+//       path:nth-of-type(2) {
+//         color: crimson;
+//         fill: crimson;
+//         stroke: crimson;
+//       }
+//     }
+//   }
+//   svg {
+//     transition: all 0.3s ease;
+//   }
+//   path {
+//     transition: all 0.3s ease;
+//   }
+// }
+.modal {
+  @apply bg-transparent text-[inherit] duration-200 ease-out;
+  transition-property: transform, opacity, visibility;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+  &:not(dialog:not(.modal-open)),
+  &::backdrop {
+    background-color: #0006;
+    animation: modal-pop 0.2s ease-out;
+  }
+}
+.modal-backdrop {
+  @apply -z-[1] col-start-1 row-start-1 grid self-stretch justify-self-stretch text-transparent;
+}
+.modal-box {
+  @apply bg-base-100 rounded-b-box rounded-t-box col-start-1 row-start-1 w-11/12 max-w-lg scale-90 transform p-6 transition duration-200 ease-out;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.modal-open .modal-box,
+.modal-toggle:checked + .modal .modal-box,
+.modal:target .modal-box,
+.modal[open] .modal-box {
+  @apply translate-y-0 scale-100;
+}
+.modal-action {
+  @apply mt-6 justify-end space-x-2;
+}
+@keyframes modal-pop {
+  0% {
+    opacity: 0;
+  }
+}

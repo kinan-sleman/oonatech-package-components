@@ -1,0 +1,73 @@
+.progress-bar__wrapper {
+  position: relative;
+}
+
+progress {
+  width: 130px;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #d8d8d8;
+  transition: width 300ms ease;
+}
+progress[value]::-webkit-progress-bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #d8d8d8;
+  transition: width 300ms ease;
+}
+progress[value]::-webkit-progress-value {
+  width: 0;
+  border-radius: 50px;
+  transition: width 300ms ease;
+}
+progress[value].red::-webkit-progress-value {
+  background-color: #e14747;
+}
+progress[value].green::-webkit-progress-value {
+  background-color: #51b066;
+}
+progress[value].yellow::-webkit-progress-value {
+  background-color: #fbe25d;
+}
+progress[value].lightgreen::-webkit-progress-value {
+  background-color: #1fb85c;
+}
+progress[value].ees::-webkit-progress-value {
+  width: 0;
+  border-radius: 50px;
+  background-color: #e46565 !important ;
+  transition: width 300ms ease;
+}
+progress[value].attendance::-webkit-progress-value {
+  width: 0;
+  border-radius: 50px;
+  background-color: #7bffb6 !important;
+  transition: width 300ms ease;
+}
+progress[value].workforce::-webkit-progress-value {
+  width: 0;
+  border-radius: 50px;
+  background-color: #7eac93 !important;
+  transition: width 300ms ease;
+}
+.double_progress {
+  // max-width: 200px;
+  height: 14px;
+  width: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+
+  > div {
+    height: 100%;
+    &:first-of-type {
+      flex-basis: 60%;
+      background-color: #ffd6d6;
+    }
+    &:last-of-type {
+      flex-basis: 40%;
+      background-color: #9af6ae;
+    }
+  }
+}

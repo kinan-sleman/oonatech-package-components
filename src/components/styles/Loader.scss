@@ -1,0 +1,33 @@
+@keyframes o1 {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.o1 {
+  animation: o1 3s infinite ease-in-out;
+  transform-origin: 12.4% 49.95%;
+}
+
+@keyframes o2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.o2 {
+  animation: o2 3s infinite ease-in-out;
+  transform-origin: 38.9% 49.95%;
+}
