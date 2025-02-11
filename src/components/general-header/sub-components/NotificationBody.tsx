@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"; // استيراد Link من react-route
 import NotificationIcon from "../../icons/NotificationIcon";
 interface NotificationData {
   id?: string;
-  title: string;
-  creationTime: string;
-  isRead: boolean;
+  title?: string;
+  creationTime?: string;
+  isRead?: boolean;
   redirectUrl?: string;
   message?: string;
 }
