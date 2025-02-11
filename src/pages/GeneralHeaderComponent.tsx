@@ -93,7 +93,7 @@ function GeneralHeaderComponent() {
         "id": "6b50d082-1831-46dd-a805-8bc2046ef303",
         "title": "Creating Team Folder",
         "message": "created a public team folder aaa",
-        "isRead": false,
+        "isRead": true,
         "creationTime": "10/02/2025",
         "redirectUrl": "https://dev-workdrive.oonatech.com/workdrive/team-folders/cc889d3a-be54-4f54-a87f-af52b26f3702"
     },
@@ -101,7 +101,7 @@ function GeneralHeaderComponent() {
         "id": "e1e4eacf-1ecd-4305-a8d6-8fcd96bb2f6d",
         "title": "Update Permission",
         "message": "Your role has been changed in a folder to be as Viewer",
-        "isRead": false,
+        "isRead": true,
         "creationTime": "04/02/2025",
         "redirectUrl": "https://dev-workdrive.oonatech.com/workdrive/team-folders/98925df5-61d8-4f8d-ab01-f4929869d10b"
     },
@@ -109,7 +109,7 @@ function GeneralHeaderComponent() {
         "id": "384d96c6-d6ef-4f57-a794-22f8d33a1d0d",
         "title": "Sharing Folder",
         "message": "added you as Editor to a folder test private",
-        "isRead": false,
+        "isRead": true,
         "creationTime": "04/02/2025",
         "redirectUrl": "https://dev-workdrive.oonatech.com/workdrive/team-folders/98925df5-61d8-4f8d-ab01-f4929869d10b"
     },
@@ -117,7 +117,7 @@ function GeneralHeaderComponent() {
         "id": "d2ca13ed-1418-4647-94ee-91d282579d88",
         "title": "Update Permission",
         "message": "Your role has been changed in a folder to be as Viewer",
-        "isRead": false,
+        "isRead": true,
         "creationTime": "04/02/2025",
         "redirectUrl": "https://dev-workdrive.oonatech.com/workdrive/my-folders/06c89265-6aea-4649-8419-409879335815"
     },
@@ -254,8 +254,7 @@ function GeneralHeaderComponent() {
       "isSystem": true
     }
   ];
-  const headerLinks = [];
-
+  console.log(NotificationsData?.filter(({isRead}) => isRead).length,'NotificationsData?.filter(({isRead}) => isRead).length')
   return (
     <GeneralHeader
       // logo={lookAndFeel?.logoFileUrl || lookAndFeel?.logoUrl}
@@ -293,6 +292,7 @@ function GeneralHeaderComponent() {
       activeLanguage=""
       mainBgColor="white"
       fontColor="black"
+      newNotificationNumber={NotificationsData?.filter(({isRead}) => !isRead).length}
       // mainBgColor={lookAndFeel?.backgroundColor}
 
       // highlightColor={lookAndFeel?.hightLightColor}

@@ -131,7 +131,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
       <div
         className={`${
           show ? "popup_effect" : "hidden"
-        } transition-all  top-8 z-20 w-full max-w-[120px] h-[350px] overflow-visible `}
+        } transition-all fixed top-20 z-20 w-full max-w-[120px] h-[350px] overflow-visible `}
       >
         <div className="px-2 w-[250px] bg-white  main-shadow max-h-[300px] overflow-y-auto h-fit  rounded-lg py-4 ">
           <div>
