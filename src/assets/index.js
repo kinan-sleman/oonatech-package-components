@@ -26,9 +26,11 @@ import FieldIcon from "./FieldIcon.svg";
 import headLineIcon from "./headLineIcon.svg";
 import EmptyIcon from "./EmptyIcon.svg";
 import DropdownListIcon from "./DropdownListIcon.svg";
+import searchIcon from "./search.svg";
 
 const Icons = {
   cloneIcon,
+  searchIcon,
   edit,
   FieldDots,
   deleteIcon,
@@ -56,6 +58,7 @@ const Icons = {
   headLineIcon,
   EmptyIcon,
   DropdownListIcon,
+  searchIcon,
 };
 
 export default Icons;
