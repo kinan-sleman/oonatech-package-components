@@ -64,7 +64,7 @@ const Table = ({
         className="w-full overflow-x-auto overflow-y-auto"
         style={{ height: tableHeight }}
       >
-        <table className="w-full relative">
+        <table className="w-full relative z-[0]">
           <TableHead
             hiddenColumns={hiddenColumns}
             setHiddenColumns={setHiddenColumns}
