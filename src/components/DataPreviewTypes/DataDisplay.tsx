@@ -75,6 +75,7 @@ interface DataPreviewTypes {
   mainTitle?: string;
   disableSearch?: boolean;
   tableHeight?: string;
+  hideCheckedOptions?: boolean;
 }
 
 function DataPreviewTypes({
@@ -110,6 +111,7 @@ function DataPreviewTypes({
   mainTitle,
   disableSearch,
   tableHeight,
+  hideCheckedOptions=false,
 }: DataPreviewTypes) {
   const [filteredData, setFilteredData] = useState(data);
   const [view, setView] = useState<AvailableViews[0]>(mainView || "table");
@@ -204,6 +206,7 @@ function DataPreviewTypes({
         data={data}
         mainTitle={mainTitle}
         handleDeleteSelected={handleDeleteSelected}
+        hideCheckedOptions={hideCheckedOptions}
       />
       {viewsMapping[view]}
     </div>

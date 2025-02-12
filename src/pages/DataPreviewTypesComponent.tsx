@@ -918,6 +918,7 @@ export default function DataPreviewTypesComponent() {
 			checkedIDs={checkedIDs}
 			setCheckedIDs={setCheckedIDs}
 			loading={loading}
+			hideCheckedOptions={true}
 		/>
 	);
 }

@@ -36,7 +36,7 @@ const TableHead = ({
   removeRowSelection?: boolean;
 }) => {
   return (
-    <thead className="sticky top-0 z-[11]">
+    <thead className="sticky top-0 z-[10]">
       <tr>
         {!removeRowSelection ? (
           <th className="w-[36px] bg-[#FCFCFC] border-b border-dashed border-[#D8D8D8]">

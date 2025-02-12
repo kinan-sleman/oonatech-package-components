@@ -29,6 +29,7 @@ const ToolBar = ({
   handleSearchInput,
   handleDeleteSelected,
   mainTitle,
+  hideCheckedOptions,
 }: {
   view: AvailableViews[0];
   setView: (view: AvailableViews[0]) => void;
@@ -45,6 +46,7 @@ const ToolBar = ({
   handleSearchInput?: (query: string) => void;
   handleDeleteSelected?: (e: any) => any;
   mainTitle?: string;
+  hideCheckedOptions?: boolean;
 }) => {
   const [filter, setFilter] = useState("");
   const [SearchQuery, setSearchQuery] = useState("");
@@ -194,6 +196,7 @@ const ToolBar = ({
             )}
           </div>
         </div>
+        {!hideCheckedOptions && (
         <div className="flex flex-row gap-3 items-center">
           <div className="flex gap-2">
             {views?.includes("table") && (
@@ -470,6 +473,7 @@ const ToolBar = ({
             )
           )}
         </div>
+          )}
       </div>
     </div>
   );
