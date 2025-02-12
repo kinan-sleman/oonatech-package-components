@@ -57,6 +57,7 @@ export type ColumnsTypes = {
   color?: string;
   noFilter?: boolean;
   noSort?: boolean;
+  noThreeDots?: boolean;
   filterOptions?: any;
   width?: string;
 }[];

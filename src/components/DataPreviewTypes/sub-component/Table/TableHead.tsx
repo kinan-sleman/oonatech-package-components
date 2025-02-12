@@ -68,6 +68,7 @@ const TableHead = ({
               minWidth,
               noFilter,
               noSort,
+              noThreeDots,
               filterOptions,
               width,
             },
@@ -103,6 +104,7 @@ const TableHead = ({
                     tableHeadActions={tableHeadActions}
                     noFilter={noFilter}
                     noSort={noSort}
+                    noThreeDots={noThreeDots}
                     filterOptions={filterOptions}
                   />
                 </div>

@@ -19,6 +19,7 @@ const HeadActions = ({
   columns,
   tableHeadActions,
   noFilter,
+  noThreeDots,
   noSort,
   filterOptions,
 }: {
@@ -37,6 +38,7 @@ const HeadActions = ({
 
   noFilter: Boolean;
   noSort: boolean;
+  noThreeDots?: boolean;
   filterOptions?: any;
 }) => {
   const [filter, setFilter] = useState<string>("");
@@ -88,21 +90,22 @@ const HeadActions = ({
           }
         />
       )}
-
-      <MenuAction
-        columns={columns}
-        hiddenColumns={hiddenColumns}
-        setHiddenColumns={setHiddenColumns}
-        filteredData={filteredData}
-        setFilteredData={setFilteredData}
-        data={data}
-        id={id}
-        label={label}
-        filter={filter}
-        setFilter={setFilter}
-        order={order}
-        setOrder={setOrder}
-      />
+      {!noThreeDots && (
+        <MenuAction
+          columns={columns}
+          hiddenColumns={hiddenColumns}
+          setHiddenColumns={setHiddenColumns}
+          filteredData={filteredData}
+          setFilteredData={setFilteredData}
+          data={data}
+          id={id}
+          label={label}
+          filter={filter}
+          setFilter={setFilter}
+          order={order}
+          setOrder={setOrder}
+        />
+      )}
     </div>
   );
 };

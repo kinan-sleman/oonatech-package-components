@@ -819,6 +819,7 @@ export default function DataPreviewTypesComponent() {
 		  id: "name",
 		  noFilter: true,
 		  noSort: true,
+		  noThreeDots: true,
 		  cell: (content, row) => (
 			<div
 			  className="flex items-center gap-[10px]"
@@ -832,6 +833,7 @@ export default function DataPreviewTypesComponent() {
 		  id: "date",
 		  align: "center",
 		  noFilter: true,
+		  noThreeDots: true,
 		  noSort: true,
 		  cell: (content, row) => (
 			<>
@@ -919,6 +921,7 @@ export default function DataPreviewTypesComponent() {
 			setCheckedIDs={setCheckedIDs}
 			loading={loading}
 			hideCheckedOptions={true}
+			disableSearch={true}
 		/>
 	);
 }

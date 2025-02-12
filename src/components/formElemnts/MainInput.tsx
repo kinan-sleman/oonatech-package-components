@@ -44,6 +44,7 @@ const MainInput = forwardRef<
     px?: number;
     value?: string | FileList | string[];
     onChange?: (value: string | string[] | FileList, e?: ChangeEvent) => void;
+    iconSize?: string;
     required?: boolean;
     options?: readonly { content: string; value: string }[] | undefined;
     onKeyPress?: (e: KeyboardEvent) => void;
@@ -66,6 +67,7 @@ const MainInput = forwardRef<
       label,
       icon,
       onIconClick,
+      iconSize= "22px",
       type = "text",
       px,
       value,
@@ -773,7 +775,7 @@ const MainInput = forwardRef<
                     />
                   </svg>
                 ) : (
-                  <img src={icon} alt="Input Icon" className="size-[22px]" />
+                  <img src={icon} alt="Input Icon" style={{ width: iconSize, height: iconSize}} />
                 )}
               </button>
             )}

@@ -11,6 +11,7 @@ function MainInputComponent() {
         icon={serachIcon}
         inputBorder={false}
         type="text"
+        iconSize="12px"
         placeholder={"Search ..."}
     />
 }
