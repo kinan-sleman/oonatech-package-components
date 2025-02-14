@@ -35,7 +35,7 @@ function ApplicationView({
       }
     });
   }, [img, title]);
-  console.log(title);
+  // console.log(title);
 
   return (
     <>

@@ -254,7 +254,6 @@ function GeneralHeaderComponent() {
       "isSystem": true
     }
   ];
-  console.log(NotificationsData?.filter(({isRead}) => isRead).length,'NotificationsData?.filter(({isRead}) => isRead).length')
   return (
     <GeneralHeader
       // logo={lookAndFeel?.logoFileUrl || lookAndFeel?.logoUrl}

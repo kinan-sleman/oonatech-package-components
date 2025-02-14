@@ -335,7 +335,7 @@ export default function FieldSettingsModal({
                     (validator: any) => validator.id
                 );
                 setValidators(filteredValidatorsIds);
-                console.log(filteredValidatorsIds, 'filteredValidatorsIds');
+                // console.log(filteredValidatorsIds, 'filteredValidatorsIds');
                 const props = await dispatch(
                     getValidatorProperties(filteredValidatorsIds)
                 );

@@ -79,7 +79,7 @@ export default function CustomFormTypeElements({
     const [headlineColor, setHeadlineColor] = useState(element?.color || "");
     const handleChangeColor = (e: any) => {
         setHeadlineColor(e.target.value);
-        console.log(e.target.value, "e.target.value");
+        // console.log(e.target.value, "e.target.value");
         dispatch(updateFieldColor({ id: element?.id, color: e.target.value }));
     };
     const handleChangeTitle = (langValue: any) => {
