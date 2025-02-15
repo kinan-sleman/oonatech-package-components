@@ -16,6 +16,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "2567127e-13bf-430f-b82c-358b41feb87c",
 				"name": "Zip file Wed Feb 05 2025 18:30:06 GMT+0300 (GMT+03:00).zip",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -64,6 +68,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "d58704f8-c64f-4034-9007-528c31774815",
 				"name": "Zip file Wed Feb 05 2025 18:30:06 GMT+0300 (GMT+03:00).zip",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -112,6 +120,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "74541309-5496-4dbe-9936-ec2863a0e6b5",
 				"name": "Zip file Wed Feb 05 2025 13:52:20 GMT+0300 (GMT+03:00).zip",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -160,6 +172,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "0d77eb96-9dcf-4eaf-9848-b0f288c89730",
 				"name": "new ew 11111111111111111",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": "",
 				"categoryId": 1,
 				"parentId": null,
@@ -206,6 +222,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -215,6 +235,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "760ce9c2-d02c-4ced-a87b-04307a9dd2fe",
 						"isOwner": false,
 						"name": "mohamed ali habib",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#FF9E9E",
 						"url": null,
 						"assignedToType": 0
@@ -227,6 +251,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "dfc0cdb0-3ca3-450f-95c7-5320b36e0c64",
 				"name": "new 111",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": "",
 				"categoryId": 1,
 				"parentId": null,
@@ -275,6 +303,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -284,6 +316,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "0b08c720-92d8-4b84-accb-c5cf265d13b3",
 						"isOwner": false,
 						"name": "joud kadri habib",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#07E7CF",
 						"url": null,
 						"assignedToType": 0
@@ -293,6 +329,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "760ce9c2-d02c-4ced-a87b-04307a9dd2fe",
 						"isOwner": false,
 						"name": "mohamed ali habib",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#FF9E9E",
 						"url": null,
 						"assignedToType": 0
@@ -305,6 +345,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "a3cf5b3f-04ef-4656-827a-a9ec2777b5d3",
 				"name": "kinan_20250204_084620.jpg 2025-02-04T08:46:20.5670150",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -351,6 +395,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -363,6 +411,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "f9e30354-3a73-4aa6-82bb-88dcde2f3bfe",
 				"name": "kinan_20250204_084620.jpg 2025-02-04T08:46:20_20250204_084927.5670150 2025-02-04T08:49:27.7966330",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -409,6 +461,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -421,6 +477,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "c1da7642-dc82-4888-82a3-c761c2a951e9",
 				"name": "flower 3_20250204_084624.jpg 2025-02-04T08:46:24.0637360",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -467,6 +527,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -479,6 +543,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "32c10a84-b9c7-4aad-aa26-7b87039bdce9",
 				"name": "flower 3_20250204_084624.jpg 2025-02-04T08:46:24_20250204_084927.0637360 2025-02-04T08:49:27.8304860",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -525,6 +593,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -537,6 +609,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "4db7da47-69ae-4f4f-a3ff-00515e123e84",
 				"name": "flower 1.jpg",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -583,6 +659,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -595,6 +675,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "43e0a15e-6bfd-4909-a0c5-f927c34c5bce",
 				"name": "flower 1_20250204_084927.jpg 2025-02-04T08:49:27.8504580",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": null,
 				"categoryId": null,
 				"parentId": null,
@@ -641,6 +725,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -653,6 +741,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "32da8355-c827-48b6-9f51-5078013d042d",
 				"name": "2 new 323",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": "",
 				"categoryId": 1,
 				"parentId": null,
@@ -696,6 +788,10 @@ export default function DataPreviewTypesComponent() {
 					{
 						"id": 36,
 						"name": "React js",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#000"
 					}
 				],
@@ -705,6 +801,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -717,6 +817,10 @@ export default function DataPreviewTypesComponent() {
 			{
 				"id": "4c332897-8c70-450e-918a-645e14483b3d",
 				"name": "1222",
+				"usersCount": {
+					val:5,
+					total: 10,
+				},
 				"description": "",
 				"categoryId": 1,
 				"parentId": null,
@@ -763,6 +867,10 @@ export default function DataPreviewTypesComponent() {
 						"memberId": "cddd301b-a705-45d5-94ca-6b6f361648b5",
 						"isOwner": true,
 						"name": "kinan kamal sleman",
+						"usersCount": {
+							val:5,
+							total: 10,
+						},
 						"color": "#49DA61",
 						"url": null,
 						"assignedToType": 0
@@ -841,6 +949,12 @@ export default function DataPreviewTypesComponent() {
 			</>
 		  ),
 		},
+	    {
+	      label: "Total Users",
+	      id: "usersCount",
+	      type: "progressbar",
+	      noFilter: true,
+	    },
 	  ];
 
 	const actions = [

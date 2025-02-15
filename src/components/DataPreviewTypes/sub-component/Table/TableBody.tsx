@@ -216,7 +216,7 @@ const Row = ({
                   {cell ? (
                     cell(row[id], row, id)
                   ) : type == "progressbar" ? (
-                    <div className="w-full !m-0 flex flex-col items-start [&_div]:!w-full [&_progress]:!w-full">
+                    <div className="w-full gap-[10px] !m-0 flex flex-col items-start [&_div]:!w-full [&_progress]:!w-full">
                       <p className="text-[#333232] text-[10px] -mb-2">
                         {row[id].val}/{row[id].total} Users
                       </p>
