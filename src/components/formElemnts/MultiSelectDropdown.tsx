@@ -18,6 +18,7 @@ const MultiSelect = ({
   popupItemsGrid,
   loading,
   fetchMore,
+  error = "",
 }: {
   placeholder?: string;
   height?: number;
@@ -38,6 +39,7 @@ const MultiSelect = ({
   searchPlaceholder?: string;
   loading?: boolean;
   fetchMore?: () => void;
+  error?: string,
 }) => {
   const [open, setOpen] = useState(false);
   const domNode = useClickOutside(() => {
@@ -90,7 +92,9 @@ const MultiSelect = ({
   return (
     <div className="w-full relative" ref={domNode}>
       <div
-        className="relative  border border-[#0000003b] hover:border-[#000000de] rounded-[10px]"
+        className={`relative rounded-[10px] border
+          ${error ? "border-[#f00] hover:border-[#000]" : "border-[#0000003b] hover:border-[#000000de]"}
+        `}
         ref={inputRef}
       >
         {selected?.length ? (
@@ -191,6 +195,8 @@ const MultiSelect = ({
             style={{
               height: height || 48,
               paddingInline: px || 28,
+              borderColor: error ? "#f00" : "",
+              outline: "none",
             }}
           ></button>
         )}
@@ -212,6 +218,7 @@ const MultiSelect = ({
           {required ? <span className="text-[#E16464]">*</span> : ""}
         </p>
       </div>
+      {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
       <div
         className="absolute z-[100] w-full"
         style={{
@@ -219,7 +226,7 @@ const MultiSelect = ({
         }}
       >
         <Collapse in={open}>
-          <div className="bg-white rounded-[14px] w-full shadow-[0px_4px_28px_0px_#00000014] py-[17px]">
+          <div className={`bg-white rounded-[14px] w-full ${error ? "" : "shadow-[0px_4px_28px_0px_#00000014]"} py-[17px]`}>
             <div className="flex px-[30px] pb-[17px] items-center">
               <CheckBox
                 label="All"
