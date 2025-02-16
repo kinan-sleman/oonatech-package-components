@@ -128,6 +128,24 @@ const MainInput = forwardRef<
                   top: "0px",
                   px: 0,
                 },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: error ? "#f00" : "",
+                  borderWidth: !inputBorder ? "0" : "",
+                },
+                "& .Mui-focused": {
+                  fontSize: "14px",
+                  top: "0%",
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderWidth: "2px",
+                    borderColor: error ? "#f00":"",
+                  },
+                },
+                "& .MuiInputLabel-root.MuiInputLabel-shrink ": {
+                  // top: "1%",
+                  fontSize: "14px",
+                  transform: "translate(14px, -9px) scale(0.75)",
+                  color: error ? "#e34848 ":"",
+                },
               }}
             >
               <InputLabel id="demo-simple-select-label">
@@ -163,6 +181,7 @@ const MainInput = forwardRef<
                     // top: "1%",
                     fontSize: "14px",
                     transform: "translate(14px, -9px) scale(0.75)",
+                    color: error ? "#e34848 ":"",
                   },
                   "& .MuiFormLabel-asterisk": {
                     color: "#ff2626",
@@ -183,6 +202,7 @@ const MainInput = forwardRef<
                     // top: "0%",
                     "& .MuiOutlinedInput-notchedOutline": {
                       borderWidth: "2px",
+                      borderColor: error ? "#f00":"",
                     },
                   },
                 }}
@@ -243,11 +263,20 @@ const MainInput = forwardRef<
                 },
                 "& .MuiInputLabel-shrink": {
                   fontSize: "14px !important",
+                  color: error ? "#e34848 ":"",
                   px: 0,
                 },
-
                 "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: error ? "#f00" : "",
                   borderWidth: !inputBorder ? "0" : "",
+                },
+                "& .Mui-focused": {
+                  fontSize: "14px",
+                  top: "0%",
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderWidth: "2px",
+                    borderColor: error ? "#f00":"",
+                  },
                 },
               }}
             />
@@ -287,6 +316,7 @@ const MainInput = forwardRef<
                   },
                   "& .MuiInputLabel-root.MuiInputLabel-shrink ": {
                     top: "1%",
+                    color: error ? "#e34848 ":"",
                     fontSize: "14px",
                     px: 0,
                     transform: "translate(14px, -9px) scale(0.75)",
@@ -301,6 +331,7 @@ const MainInput = forwardRef<
                     height: "10px",
                   },
                   "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: error ? "#f00" : "",
                     borderWidth: !inputBorder ? "0" : "",
                   },
                   "& .Mui-focused": {
@@ -308,6 +339,7 @@ const MainInput = forwardRef<
                     top: "0%",
                     "& .MuiOutlinedInput-notchedOutline": {
                       borderWidth: "2px",
+                      borderColor: error ? "#f00":"",
                     },
                   },
                 }}
@@ -417,6 +449,7 @@ const MainInput = forwardRef<
                       fontSize: "14px",
                       px: 0,
                       transform: "translate(14px, -9px) scale(0.75)",
+                      color: error ? "#e34848 ":"",
                     },
                     "& label": {
                       fontSize: "12px",
@@ -435,6 +468,7 @@ const MainInput = forwardRef<
                       top: "0%",
                       "& .MuiOutlinedInput-notchedOutline": {
                         borderWidth: "2px",
+                        borderColor: error ? "#f00":"",
                       },
                     },
                   }}
@@ -509,6 +543,7 @@ const MainInput = forwardRef<
                 top: "1%",
                 fontSize: "14px",
                 px: 0,
+                color: error ? "#e34848 ":"",
                 transform: "translate(14px, -9px) scale(0.75)",
               },
               "& label": {
@@ -518,8 +553,9 @@ const MainInput = forwardRef<
               },
               "& .MuiInputBase-input": {
                 height: "10px",
-              },
+              }, 
               "& .MuiOutlinedInput-notchedOutline": {
+                borderColor: error ? "#f00" : "",
                 borderWidth: !inputBorder ? "0" : "",
               },
               "& .Mui-focused": {
@@ -527,6 +563,7 @@ const MainInput = forwardRef<
                 top: "0%",
                 "& .MuiOutlinedInput-notchedOutline": {
                   borderWidth: "2px",
+                  borderColor: error ? "#f00":"",
                 },
               },
             }}
@@ -588,6 +625,7 @@ const MainInput = forwardRef<
                   fontSize: "14px",
                   px: 0,
                   transform: "translate(14px, -9px) scale(0.75)",
+                  color: error ? "#e34848 ":"",
                 },
                 "& label": {
                   fontSize: "12px",
@@ -605,6 +643,7 @@ const MainInput = forwardRef<
                   top: "0%",
                   "& .MuiOutlinedInput-notchedOutline": {
                     borderWidth: "2px",
+                    borderColor: error ? "#f00":"",
                   },
                 },
               }}
@@ -668,7 +707,7 @@ const MainInput = forwardRef<
                   top: "0%",
                   "& .MuiOutlinedInput-notchedOutline": {
                     borderWidth: "2px",
-                  borderColor: error ? "#f00":"",
+                    borderColor: error ? "#f00":"",
                   },
                 },
               }}
