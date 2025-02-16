@@ -47,21 +47,26 @@ const Pagination = ({
       </button>
       <p className="text-sm text-[#A4A4A4]">Page</p>
       <input
-        // type="number"
         className="size-6 bg-[#fff] rounded border border-[#D6D6D6] text-center text-[#A4A4A4]"
+        value={pageSearch}
         onKeyDown={(e) => {
           if (
-            (e.key === "0" && e.target.value === "") || 
-            (!/^[1-9]$/.test(e.key) &&                 
-              !["Backspace", "ArrowLeft", "ArrowRight", "Tab", "Delete"].includes(e.key)) 
+            !/^[0-9]$/.test(e.key) && 
+            !["Backspace", "ArrowLeft", "ArrowRight", "Tab", "Delete"].includes(e.key)
           ) {
             e.preventDefault();
           }
         }}
-        value={pageSearch}
         onChange={(e) => {
-          setpageSearch(+e.target.value);
-          handleSearchPage && handleSearchPage(+e.target.value);
+          let newValue = e.target.value;
+          if (/^0\d/.test(newValue)) {
+            newValue = newValue.replace(/^0+/, "");
+          }
+          if (newValue === "0" || newValue === "") {
+            newValue = "1";
+          }
+          setpageSearch(+newValue);
+          handleSearchPage && handleSearchPage(+newValue);
         }}
       />
       <p className="text-sm text-[#A4A4A4]">of</p>
@@ -84,16 +89,22 @@ const Pagination = ({
           value={pageSizeNum || data?.pageSize}
           onKeyDown={(e) => {
             if (
-              (e.key === "0" && e.target.value === "") || 
-              (!/^[1-9]$/.test(e.key) &&                 
-                !["Backspace", "ArrowLeft", "ArrowRight", "Tab", "Delete"].includes(e.key)) 
+              !/^[0-9]$/.test(e.key) && 
+              !["Backspace", "ArrowLeft", "ArrowRight", "Tab", "Delete"].includes(e.key)
             ) {
               e.preventDefault();
             }
           }}
           onChange={(e) => {
-            setPageSize(e.target.value);
-            handleItemsNumber && handleItemsNumber(e.target.value);
+            let newValue = e.target.value;
+            if (/^0\d/.test(newValue)) {
+              newValue = newValue.replace(/^0+/, "");
+            }
+            if (newValue === "0" || newValue === "") {
+              newValue = "1";
+            }
+            setPageSize(newValue);
+            handleItemsNumber && handleItemsNumber(newValue);
           }}
         />
       </div>

@@ -218,7 +218,7 @@ const MultiSelect = ({
           {required ? <span className="text-[#E16464]">*</span> : ""}
         </p>
       </div>
-      {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+      {error && <p className="text-red-500 text-xs mt-1 ml-3">{error}</p>}
       <div
         className="absolute z-[100] w-full"
         style={{

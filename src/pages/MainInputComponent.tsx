@@ -79,6 +79,14 @@ function MainInputComponent() {
                 onChange={handleMultiSelectChange}
                 error={multiSelectError}
             />
+
+            <div className="mt-4"></div>
+            <MultiSelect
+                placeholder="Select items"
+                data={options}
+                selected={selectedItems}
+                onChange={handleMultiSelectChange}
+            />
         </>
     );
 }
