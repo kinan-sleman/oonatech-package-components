@@ -85,6 +85,7 @@ export type ActionTypes = {
   type:
     | "delete"
     | "edit"
+    | "clone"
     | "expand"
     | "custom"
     | "editLangEnable"

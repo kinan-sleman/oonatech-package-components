@@ -15,6 +15,7 @@ import CheckBox from "../../../formElemnts/CheckBox";
 import ImgHelper from "../../../elements/ImgHelper";
 import Cancel from "../../../icons/Cancel";
 import Show from "../../../icons/Show";
+import Clone from "../../../icons/Clone";
 
 const AntSwitch = styled(Switch)(() => ({
   width: 38,
@@ -556,6 +557,8 @@ const Action = ({
             ? "hover:bg-[#E9F3FF]"
             : type === "show"
             ? "hover:bg-[#6675FF]"
+            : type === "clone"
+            ? "hover:bg-[#bcffc2]"
             : ""
           : "cursor-not-allowed opacity-75"
       } flex items-center justify-center ${className}`}
@@ -568,6 +571,7 @@ const Action = ({
 
 const actionsMapping = (type: string, hovered: boolean) => {
   const actionsMapping: { [key: string]: ReactNode } = {
+    clone: <Clone hovered={hovered} />,
     delete: <Delete hovered={hovered} />,
     edit: <Edit hovered={hovered} />,
     cancel: <Cancel hovered={hovered} />,

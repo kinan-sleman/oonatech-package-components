@@ -970,6 +970,12 @@ export default function DataPreviewTypesComponent() {
 				console.log('"delete": ', "delete");
 			},
 		},
+		{
+			type: "clone",
+			onClick: () => {
+				console.log('"clone": ', "clone");
+			},
+		},
 	];
 
 	const generatePdf = async () => {
