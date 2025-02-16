@@ -635,7 +635,6 @@ const MainInput = forwardRef<
                 height: height ? height : "44px",
                 width: "100%",
                 // 1px 5px 9px -1px rgb(164 164 164 / 52%);
-
                 "& .MuiInputBase-root": {
                   height: height ? height : "44px",
                   borderRadius: "8px",
@@ -650,6 +649,7 @@ const MainInput = forwardRef<
                   fontSize: "14px",
                   px: 0,
                   transform: "translate(14px, -9px) scale(0.75)",
+                  color: error ? "#e34848 ":"",
                 },
                 "& label": {
                   fontSize: "12px",
@@ -661,22 +661,24 @@ const MainInput = forwardRef<
                 },
                 "& .MuiOutlinedInput-notchedOutline": {
                   borderWidth: !inputBorder ? "0" : "",
+                  borderColor: error ? "#f00" : "",
                 },
                 "& .Mui-focused": {
                   fontSize: "14px",
                   top: "0%",
                   "& .MuiOutlinedInput-notchedOutline": {
                     borderWidth: "2px",
+                  borderColor: error ? "#f00":"",
                   },
                 },
               }}
               label={
                 showAsterisk ? (
-                  <span className="flex items-center gap-1">
+                  <span className={`flex items-center gap-1 `}>
                     {label} <span className="text-[#ff2626] text-xs">*</span>
                   </span>
                 ) : (
-                  label
+                  `${label}`
                 )
               }
               placeholder={placeholder}
@@ -782,7 +784,7 @@ const MainInput = forwardRef<
           </>
         )}
         {error ? (
-          <span className="text-[10px] block text-red-500 font-normal mt-[1px]">
+          <span className="text-[10px] block text-red-500 font-normal mt-[1px] ml-3">
             {error}
           </span>
         ) : (
