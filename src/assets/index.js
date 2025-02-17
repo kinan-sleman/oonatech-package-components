@@ -27,8 +27,10 @@ import headLineIcon from "./headLineIcon.svg";
 import EmptyIcon from "./EmptyIcon.svg";
 import DropdownListIcon from "./DropdownListIcon.svg";
 import searchIcon from "./search.svg";
+import add from "./add.svg";
 
 const Icons = {
+  add,
   cloneIcon,
   searchIcon,
   edit,

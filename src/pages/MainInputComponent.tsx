@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MainInput from "../components/formElemnts/MainInput";
 import MultiSelect from "../components/formElemnts/MultiSelectDropdown";
 import searchIcon from "../assets/search.svg";
+import add from "../assets/add.svg";
 
 function MainInputComponent() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -39,11 +40,12 @@ function MainInputComponent() {
     return (
         <>
             <MainInput
+                height={"50px"}
                 value={searchQuery}
                 onChange={(value) => setSearchQuery(value as string)}
-                height="32px"
+                height="30px"
                 onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
-                icon={searchIcon}
+                icon={add}
                 inputBorder={false}
                 type="text"
                 placeholder="Search ..."
@@ -56,12 +58,13 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 value={searchQuery}
                 onChange={(value) => {
                     setSearchQuery(value as string);
                     setErrorMessage(value !== "" ? "" : "The search field is required");
                 }}
-                height="32px"
+                height="30px"
                 onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
                 icon={searchIcon}
                 inputBorder={false}
@@ -75,12 +78,13 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 value={searchQuery}
                 onChange={(value) => {
                     setSearchQuery(value as string);
                     setErrorMessage(value !== "" ? "" : "The search field is required");
                 }}
-                height="32px"
+                height="30px"
                 onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
                 icon={searchIcon}
                 inputBorder={true}
@@ -94,12 +98,13 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 value={searchQuery}
                 onChange={(value) => {
                     setSearchQuery(value as string);
                     setErrorMessage(value !== "" ? "" : "The search field is required");
                 }}
-                height="32px"
+                height="30px"
                 onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
                 icon={searchIcon}
                 inputBorder={true}
@@ -113,12 +118,13 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 value={searchQuery}
                 onChange={(value) => {
                     setSearchQuery(value as string);
                     setErrorMessage(value !== "" ? "" : "The search field is required");
                 }}
-                height="32px"
+                height="30px"
                 onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
                 icon={searchIcon}
                 inputBorder={true}
@@ -132,12 +138,13 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 value={searchQuery}
                 onChange={(value) => {
                     setSearchQuery(value as string);
                     setErrorMessage(value !== "" ? "" : "The search field is required");
                 }}
-                height="32px"
+                height="30px"
                 onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
                 icon={searchIcon}
                 inputBorder={true}
@@ -151,12 +158,13 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 value={searchQuery}
                 onChange={(value) => {
                     setSearchQuery(value as string);
                     setErrorMessage(value !== "" ? "" : "The search field is required");
                 }}
-                height="32px"
+                height="30px"
                 onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
                 icon={searchIcon}
                 inputBorder={true}
@@ -170,6 +178,7 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 inputBorder
                 value={name}
                 label={"searchableSelect"}
@@ -186,6 +195,7 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 inputBorder
                 value={name}
                 label={"select"}
@@ -202,6 +212,7 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 inputBorder
                 value={name}
                 label={"searchableMultiSelect"}
@@ -218,6 +229,7 @@ function MainInputComponent() {
             <div className="mt-2"></div>
 
             <MainInput
+                height={"50px"}
                 inputBorder
                 value={name}
                 label={"multiSelect"}
