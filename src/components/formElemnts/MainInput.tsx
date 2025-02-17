@@ -762,7 +762,7 @@ const MainInput = forwardRef<
               <button
                 // @ts-ignore
                 tabIndex="-1"
-                className="absolute top-[50%] -translate-y-[50%] z-20 right-[10px]"
+                className="absolute top-[5px] z-20 right-[10px]"
                 type="button"
                 onClick={() => {
                   onIconClick && onIconClick();
