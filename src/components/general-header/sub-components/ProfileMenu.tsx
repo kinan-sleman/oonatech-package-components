@@ -86,7 +86,17 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
             {username?.split(" ")[0]}
           </span>
         </div>
-        <img src={userImg} alt="img" width={40} />
+        {userImg ? (
+          <img src={userImg} className="rounded-full transition-shadow duration-200 hover:shadow-[1px_0px_3px_2px_rgba(162,228,255,1)] p-[2px]" alt="img" width={42} />
+        ) : (
+          <div className="rounded-full uppercase w-[40px] h-[40px] flex items-center justify-center p-1 text-white bg-green-400">
+            {username
+              ? `${username?.split(" ")[0]?.charAt(0)}${username
+                  ?.split(" ")[1]
+                  ?.charAt(0)}`
+              : "OT"}
+          </div>
+        )}
       </div>
 
       <div
@@ -96,13 +106,17 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
       >
         <div className="flex items-center justify-between pt-2  mb-2 pb-5 border-b-[1px] px-5 border-[#DDDDDD]">
           <div className="flex items-start gap-2">
-            <div className="rounded-full uppercase w-[40px] h-[40px] flex items-center justify-center p-1 text-white bg-green-400">
-              {username
-                ? `${username?.split(" ")[0]?.charAt(0)}${username
-                    ?.split(" ")[1]
-                    ?.charAt(0)}`
-                : "OT"}
-            </div>
+             {userImg ? (
+                <img src={userImg} className="rounded-full transition-shadow duration-200 hover:shadow-[1px_0px_3px_2px_rgba(162,228,255,1)] p-[2px]" alt="img" width={42} />
+              ) : (
+                <div className="rounded-full uppercase w-[40px] h-[40px] flex items-center justify-center p-1 text-white bg-green-400">
+                  {username
+                    ? `${username?.split(" ")[0]?.charAt(0)}${username
+                        ?.split(" ")[1]
+                        ?.charAt(0)}`
+                    : "OT"}
+                </div>
+              )}
             <div className="flex flex-col">
               <h4 className="text-[#333232] font-normal text-[14px]   text-left">
                 {username ? username : ""}

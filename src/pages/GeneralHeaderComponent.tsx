@@ -285,7 +285,7 @@ function GeneralHeaderComponent() {
       userEmail={"kenan@oonatech.com"}
       userRole="Admin"
       profileLink="/"
-      userImg={""}
+      userImg={"/kinan.jpg"}
       headerLinks={customLinks}
       handleChangeLanguage={() => { }}
       activeLanguage=""
