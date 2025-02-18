@@ -76,6 +76,7 @@ export type ToolBarBtnsTypes = {
   className?: string;
   status?: boolean;
   type?: string;
+  value?: string;
   options?: optionType[];
   exportPDF?: () => any;
   exportExcel?: () => any;

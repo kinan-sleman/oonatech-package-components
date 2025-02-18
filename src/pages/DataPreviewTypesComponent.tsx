@@ -3,7 +3,25 @@ import DataPreviewTypes from "../components/DataPreviewTypes/DataDisplay";
 import Export from "../components/icons/Export";
 import Add from "../components/icons/Add";
 export default function DataPreviewTypesComponent() {
-	const data = {
+	const lookup = [
+        {
+            "id": "46cf7c96-fa45-47e2-bcd8-5e4193f91640",
+            "name": "OonaOne",
+            "logoUrl": null
+        },
+        {
+            "id": "7a953791-48ff-4d89-bd46-88196fd43fa7",
+            "name": "test2",
+            "logoUrl": null
+        },
+        {
+            "id": "27640cc2-06a7-4c5b-8431-cf1ed89e2ad2",
+            "name": "test5",
+            "logoUrl": null
+        }
+    ];
+
+    const data = {
 		"totalItemsCount": 13,
 		"pageSize": 50,
 		"totalPagesCount": 1,
@@ -1003,6 +1021,39 @@ export default function DataPreviewTypesComponent() {
 			exportPDF: () => generatePdf(),
 			exportExcel: () => generateExcel(),
 		},
+    {
+      icon: "",
+      text: "",
+      type: "selectBox",
+      value: "0",
+      onClick: (e) => {
+        // @ts-ignore
+        dispatch(getRoles({
+	          pagedRequest: {
+	            sortingField: roles?.sortingField || "id",
+	            sortingDir: roles?.sortingDir || "desc",
+	            searchQueries: [
+	              {
+	                columnName: roles?.searchQueries[0]?.columnName || "",
+	                searchQuery:
+	                  roles?.searchQueries[0]?.searchQuery || "",
+	              },
+	            ],
+	            pageNumber: roles?.pageIndex || 1,
+	            pageSize: roles?.pageSize || 5,
+	          },
+	          applicationId: e.target.value == 0 ? null : e.target.value,
+	        }));
+	      },
+		  options: lookup && [
+		    {
+		      id: 0,
+		      value: 0,
+		      option: "All",
+		    },
+		    ...lookup.map(({ id, name }) => ({ id, value: id, option: name })),
+		  ],
+		},
 	];
 
 	const tableHeadActions: any = [
@@ -1040,7 +1091,7 @@ export default function DataPreviewTypesComponent() {
 			checkedIDs={checkedIDs}
 			setCheckedIDs={setCheckedIDs}
 			loading={loading}
-			hideCheckedOptions={true}
+			hideCheckedOptions={false}
 			disableSearch={true}
 		/>
 	);

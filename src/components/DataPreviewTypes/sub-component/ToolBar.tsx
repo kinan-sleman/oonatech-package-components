@@ -154,6 +154,7 @@ const ToolBar = ({
                     width,
                     className,
                     status,
+                    value,
                     type,
                     options,
                     exportPDF,
@@ -167,6 +168,7 @@ const ToolBar = ({
                         <div className="relative" key={i}>
                           <select
                             onChange={onClick}
+                            value={value}
                             className="border cursor-pointer border-[#EAEAEA] px-2 py-1 h-[40px] rounded-lg min-w-[120px]"
                           >
                             {options?.map((item) => (
