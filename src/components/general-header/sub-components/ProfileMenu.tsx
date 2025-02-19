@@ -87,14 +87,14 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
           </span>
         </div>
         {userImg ? (
-          <img src={userImg} className="rounded-full transition-shadow duration-200 hover:shadow-[1px_0px_3px_2px_rgba(162,228,255,1)] p-[2px]" alt="img" width={42} />
+          <img src={userImg} className={`rounded-full transition-shadow duration-200 hover:shadow-[1px_0px_3px_2px_rgba(162,228,255,1)] ${show ? "shadow-[1px_0px_3px_2px_rgba(162,228,255,1)]" : ""} p-[2px]`} alt="img" width={42} />
         ) : (
           <div className="rounded-full uppercase w-[40px] h-[40px] flex items-center justify-center p-1 text-white bg-green-400">
             {username
               ? `${username?.split(" ")[0]?.charAt(0)}${username
                   ?.split(" ")[1]
                   ?.charAt(0)}`
-              : "OT"}
+              : "OT"}  
           </div>
         )}
       </div>

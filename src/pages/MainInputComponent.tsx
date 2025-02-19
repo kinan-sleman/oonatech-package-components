@@ -39,21 +39,23 @@ function MainInputComponent() {
 
     return (
         <>
-            <MainInput
-                height={"50px"}
-                value={searchQuery}
-                onChange={(value) => setSearchQuery(value as string)}
-                height="30px"
-                onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
-                icon={add}
-                inputBorder={false}
-                type="text"
-                placeholder="Search ..."
-                required={true}
-                label="text ..."
-                error={errorMessage}
-                inputBorder
-            />
+            <div className="flex ">
+                <MainInput
+                    height={"50px"}
+                    value={searchQuery}
+                    onChange={(value) => setSearchQuery(value as string)}
+                    height="30px"
+                    onIconClick={() => searchQuery !== "" && console.log("Searching:", searchQuery)}
+                    icon={add}
+                    inputBorder={false}
+                    type="text"
+                    placeholder="Search ..."
+                    required={true}
+                    label="text ..."
+                    error={errorMessage}
+                    inputBorder
+                />
+            </div>
 
             <div className="mt-2"></div>
 
