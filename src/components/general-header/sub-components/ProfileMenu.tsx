@@ -74,7 +74,7 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
     >
       <div
         className="flex items-center gap-1 cursor-pointer ml-[15px]"
-        // onMouseMove={handleMouseEnter}
+      // onMouseMove={handleMouseEnter}
       >
         <div className="flex flex-col text-right">
           <h5 className="text-[#A4A4A4] text-[12px] font-normal -mb-[2px]">
@@ -91,32 +91,31 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
         ) : (
           <div className="rounded-full uppercase w-[40px] h-[40px] flex items-center justify-center p-1 text-white bg-green-400">
             {username
-              ? `${username?.split(" ")[0]?.charAt(0)}${username
-                  ?.split(" ")[1]
-                  ?.charAt(0)}`
-              : "OT"}  
+              ? username.split(" ").length > 1
+                ? `${username.split(" ")[0].charAt(0)}${username.split(" ")[1]?.charAt(0) || ""}`
+                : username.slice(0, 2).toUpperCase() 
+              : "OT"} 
           </div>
         )}
       </div>
 
       <div
-        className={`${
-          show ? "popup_effect" : "hidden"
-        } transition-all  rounded-lg main-shadow z-20  w-[265px]  px-0 py-5  bg-white`}
+        className={`${show ? "popup_effect" : "hidden"
+          } transition-all  rounded-lg main-shadow z-20  w-[265px]  px-0 py-5  bg-white`}
       >
         <div className="flex items-center justify-between pt-2  mb-2 pb-5 border-b-[1px] px-5 border-[#DDDDDD]">
           <div className="flex items-start gap-2">
-             {userImg ? (
-                <img src={userImg} className="rounded-full transition-shadow duration-200 hover:shadow-[1px_0px_3px_2px_rgba(162,228,255,1)] p-[2px]" alt="img" width={42} />
-              ) : (
-                <div className="rounded-full uppercase w-[40px] h-[40px] flex items-center justify-center p-1 text-white bg-green-400">
-                  {username
-                    ? `${username?.split(" ")[0]?.charAt(0)}${username
-                        ?.split(" ")[1]
-                        ?.charAt(0)}`
-                    : "OT"}
-                </div>
-              )}
+            {userImg ? (
+              <img src={userImg} className="rounded-full transition-shadow duration-200 hover:shadow-[1px_0px_3px_2px_rgba(162,228,255,1)] p-[2px]" alt="img" width={42} />
+            ) : (
+              <div className="rounded-full uppercase w-[40px] h-[40px] flex items-center justify-center p-1 text-white bg-green-400">
+                {username
+                  ? username.split(" ").length > 1
+                    ? `${username.split(" ")[0].charAt(0)}${username.split(" ")[1]?.charAt(0) || ""}`
+                    : username.slice(0, 2).toUpperCase() 
+                  : "OT"} 
+              </div>
+            )}
             <div className="flex flex-col">
               <h4 className="text-[#333232] font-normal text-[14px]   text-left">
                 {username ? username : ""}
@@ -197,9 +196,8 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
             )}
           </button>
           <ul
-            className={`${
-              showLang ? "block" : "hidden"
-            } transition-all absolute top-[13rem]  rounded-lg main-shadow max-h-[200px] overflow-y-auto  right-[16rem] w-[195px] bg-white z-[2]`}
+            className={`${showLang ? "block" : "hidden"
+              } transition-all absolute top-[13rem]  rounded-lg main-shadow max-h-[200px] overflow-y-auto  right-[16rem] w-[195px] bg-white z-[2]`}
           >
             {languageList?.map((lng) => (
               <li

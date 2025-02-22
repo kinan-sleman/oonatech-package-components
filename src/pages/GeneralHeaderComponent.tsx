@@ -281,11 +281,11 @@ function GeneralHeaderComponent() {
       notificationData  ={NotificationsData?.map(({id, title, message, isRead, redirectUrl, creationTime}) => ({
         id, title, message, isRead, redirectUrl, creationTime
       }))}
-      username={"kinan sleman"}
+      username={"admin"}
       userEmail={"kenan@oonatech.com"}
       userRole="Admin"
       profileLink="/"
-      userImg={"/kinan.jpg"}
+      userImg=""
       headerLinks={customLinks}
       handleChangeLanguage={() => { }}
       activeLanguage=""

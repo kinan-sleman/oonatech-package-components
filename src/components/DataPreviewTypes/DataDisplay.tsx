@@ -16,6 +16,7 @@ import GroupCard from "./sub-component/Cards/GroupCard";
 import EmployeesChart from "./sub-component/EmployeesChart";
 import Export from "../icons/Export";
 import { Add } from "@mui/icons-material";
+import UserCard from "./sub-component/Cards/UserCard";
 
 export interface headActions {
   type: "sort" | "filter";
@@ -56,7 +57,7 @@ interface DataPreviewTypes {
   handleItemsNumber?: any;
   handleSearchInput?: (query?: string) => void | undefined;
   toolbarActions?: ("add" | "export")[];
-  cardType?: "list" | "view" | "group";
+  cardType?: "list" | "view" | "group" | "user";
   // cardListView?: boolean;
   titleCard?: string;
   linkCard?: linkCardType;
@@ -149,6 +150,17 @@ function DataPreviewTypes({
         <ListCard
           data={data}
           titleCard={titleCard}
+          linkCard={linkCard}
+          handleNextPage={handleNextPage}
+          handlePrevPage={handlePrevPage}
+          handleItemsNumber={handleItemsNumber}
+          handleSearchPage={handleSearchPage}
+        />
+      ) : cardType == "user" ? (
+        <UserCard
+          data={data}
+          columns={columns}
+          // cardListView={cardListView}
           linkCard={linkCard}
           handleNextPage={handleNextPage}
           handlePrevPage={handlePrevPage}
