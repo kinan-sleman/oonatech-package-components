@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import GeneralHeaderComponent from "../pages/GeneralHeaderComponent";
 import DataPreviewTypesComponent from "../pages/DataPreviewTypesComponent";
 import MainInputComponent from "../pages/MainInputComponent";
+import SidebarComponent from "../pages/SidebarComponent";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/general-header" element={<GeneralHeaderComponent />} />
         <Route path="/table" element={<DataPreviewTypesComponent />} />
         <Route path="/input" element={<MainInputComponent />} />
+        <Route path="/sidebar" element={<SidebarComponent />} />
         <Route path="/" element={<Navigate to="/general-header" />} />
       </Routes>
     </Router>

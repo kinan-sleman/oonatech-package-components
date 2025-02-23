@@ -39,9 +39,22 @@ export default function DataPreviewTypesComponent() {
 				"position": ".net devloper",
 				"email": "amira@oonatech.com",
 				"color": "#07E7CF",
-				"managerId": "36684694-f4bf-4efa-95e9-1f716619ca67",
-				"managerName": "Abdulhamid Mahmoud Tork",
-				"managerUrl": "https://minioapi.oonatech.com/iam/e27c93fc-23af-4d53-8c5b-9147ce5e27db1665946877404.jpeg",
+				"managerId": null,
+				"managerName": null,
+				"managerUrl": null,
+				"designations": []
+			},
+			{
+				"id": "d73dfc59-4d67-467f-a107-ceb7df7c1d30",
+				"name": "Shaed Nemmer Joudeh",
+				"userName": "Shaden",
+				"url": null,
+				"position": "Manager",
+				"email": "ShadenJo@gmail.com",
+				"color": "#49DA61",
+				"managerId": "d3619ded-a369-45f8-a46f-f84c4556f31f",
+				"managerName": "Abd Mahmoud Tork",
+				"managerUrl": null,
 				"designations": []
 			},
 			{
@@ -65,9 +78,9 @@ export default function DataPreviewTypesComponent() {
 				"position": "Developer",
 				"email": "kenan@oonatech.com",
 				"color": "#49DA61",
-				"managerId": "36684694-f4bf-4efa-95e9-1f716619ca67",
-				"managerName": "Abdulhamid Mahmoud Tork",
-				"managerUrl": "https://minioapi.oonatech.com/iam/e27c93fc-23af-4d53-8c5b-9147ce5e27db1665946877404.jpeg",
+				"managerId": null,
+				"managerName": null,
+				"managerUrl": null,
 				"designations": []
 			},
 			{
@@ -81,29 +94,16 @@ export default function DataPreviewTypesComponent() {
 				"managerId": null,
 				"managerName": null,
 				"managerUrl": null,
-				"designations": []
-			},
-			{
-				"id": "36684694-f4bf-4efa-95e9-1f716619ca67",
-				"name": "Abdulhamid Mahmoud Tork",
-				"userName": "undefined",
-				"url": "https://minioapi.oonatech.com/iam/e27c93fc-23af-4d53-8c5b-9147ce5e27db1665946877404.jpeg",
-				"position": "CEO",
-				"email": "Abdulhamid.tork@gmail.com",
-				"color": "#9F6EFE",
-				"managerId": null,
-				"managerName": null,
-				"managerUrl": null,
 				"designations": [
 					{
-						"color": "#C6C6C6",
-						"id": "bc870bce-a7cf-4ff2-8481-ef94e3ffdce9",
-						"name": "gfdgdgdg"
+						"color": "#9F6EFE",
+						"id": "6638054f-d822-4b2b-9c47-331c29281998",
+						"name": "afsd"
 					},
 					{
-						"color": "#54D1B8",
-						"id": "b3bfc6ba-16cd-46b7-b9af-c0287fc6ec4a",
-						"name": "test3"
+						"color": "#FCA743",
+						"id": "bd726338-901c-4fbe-a729-7435bcfb2e27",
+						"name": "assasaas"
 					}
 				]
 			},
@@ -120,14 +120,23 @@ export default function DataPreviewTypesComponent() {
 				"managerUrl": null,
 				"designations": [
 					{
+						"color": "#9F6EFE",
+						"id": "6638054f-d822-4b2b-9c47-331c29281998",
+						"name": "afsd"
+					},
+					{
+						"color": "#FCA743",
+						"id": "bd726338-901c-4fbe-a729-7435bcfb2e27",
+						"name": "assasaas"
+					},
+					{
 						"color": "#C6C6C6",
 						"id": "b7409013-6812-4f04-90e0-3eb9bddeb107",
 						"name": "bb2"
 					}
 				]
 			}
-		]
-		,
+		],
 		"searchQueries": [
 			{
 				"columnName": "all",
@@ -172,7 +181,7 @@ export default function DataPreviewTypesComponent() {
 		{
 			label: "Employee name",
 			id: "name",
-			type: "user", 
+			type: "user",
 			color: "color",
 			isMainForCards: true,
 			isMainTitle: true,

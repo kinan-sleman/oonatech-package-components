@@ -89,13 +89,14 @@ function SideBarWithPreview({
   // };
 
   return (
-    <section className="flex w-full mr-3 gap-[15px] relative h-full">
+    <section className="flex w-full mr-3 gap-[15px] relative"
+     style={{ minHeight: 'calc(100vh + -30px)' }}>
       {routes?.length ? (
         <section
           className={`${
             styleSideBar
               ? styleSideBar
-              : "absolute z-[5] h-[calc(100%-20px)] top-[15px] left-[2.5%]"
+              : "absolute z-[5] h-[calc(100%-20px)] top-[15px] left-[4%] overflow-y-auto"
           }`}
         >
           <section
@@ -103,8 +104,9 @@ function SideBarWithPreview({
               backgroundColor: sideBarBackgroundColor
                 ? sideBarBackgroundColor
                 : "#F9F9F9",
+                minHeight: 'calc(100vh + -50px)'
             }}
-            className={` h-full text-left   transition-all duration-300   px-1 py-3 ${
+            className={` texleft   transition-all duration-300   px-1 py-3 ${
               showSideBar
                 ? "w-[220px] rounded-[14px]"
                 : "w-[50px] rounded-[24px]"
