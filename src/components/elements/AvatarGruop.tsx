@@ -106,14 +106,16 @@ function validateImage(url: string, name: string): Promise<string | null> {
   });
 }
 const extractInitials = (name: string): string => {
-  const words = name.toUpperCase().split(" ");
+  if (!name) return "";
+  const words = name.trim().toUpperCase().split(/\s+/);
   if (words.length === 1) {
     return words[0].slice(0, 2);
   } else if (words.length >= 2) {
     return words[0][0] + words[1][0];
   }
-  return name.slice(0, 2);
+  return "";
 };
+
 
 const generateRandomColor = (): string => {
   const letters = "0123456789ABCDEF";

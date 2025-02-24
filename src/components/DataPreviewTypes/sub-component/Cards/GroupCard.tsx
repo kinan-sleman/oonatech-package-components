@@ -74,7 +74,6 @@ const Card = ({
     setAnchorEl(null);
   };
   const regex = /^(\d{4}-\d{2}-\d{2})/;
-
   return (
     <>
       <div className="border flex flex-col items-start justify-between group_box border-[#E9E9E9] pt-[18px] pb-[18px] pl-[18px] pr-[18px] rounded-[10px] overflow-y-auto relative max-h-[353px] lg:basis-[calc(100%/4-20px)] md:basis-[calc(100%/3-20px)]">
@@ -93,8 +92,8 @@ const Card = ({
                     {isMainForCards && (
                       <div>
                         <ImgHelper
-                          color={row?.color}
-                          backgroundColor={row?.backgroundColor}
+                          // color={row?.color}
+                          backgroundColor={row?.color}
                           img={row[id]}
                           title={row.name || row.title}
                           bigWidth
