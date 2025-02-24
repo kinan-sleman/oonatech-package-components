@@ -3,7 +3,7 @@ import DataPreviewTypes from "../components/DataPreviewTypes/DataDisplay";
 import Export from "../components/icons/Export";
 import Add from "../components/icons/Add";
 import { Link } from "react-router-dom";
-import AvatarGruop from "../components/elements/AvatarGruop";
+import AvatarGroup from "../components/elements/AvatarGroup";
 import { ColumnsTypes } from "../components/DataPreviewTypes/sub-component/types/tableTypes";
 export default function DataPreviewTypesComponent() {
 	const lookup = [
@@ -44,7 +44,7 @@ export default function DataPreviewTypesComponent() {
 					{
 						"email": "testt23@gmail.com",
 						"position": null,
-						"url": null,
+						"url": "https://minioapi.oonatech.com/iam/4165fa4c-2df1-40e7-8e48-d453a50a8339kinan.jpg",
 						"color": "#FF9E9E",
 						"lastUpdateDate": "2025-02-23T16:43:03.78582",
 						"createDate": null,
@@ -311,10 +311,10 @@ export default function DataPreviewTypesComponent() {
 				console.log(row?.users,'row?.users')
 				return (
 					<Link to={`/iam/groups/${row.id}`}>
-						<AvatarGruop data={row?.users?.map(({ url, name, color }) => ({
-							src: url,
+						<AvatarGroup data={row?.users?.map(({ url, name, color }) => ({
+							url,
 							name,
-							backgroundColor: color,
+							color: color,
 						}))} />
 					</Link>
 				)

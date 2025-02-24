@@ -8,7 +8,7 @@ import { ActionTypes, ColumnsTypes, TableDataTypes } from "../types/tableTypes";
 import Delete from "../../../icons/Delete";
 import Edit from "../../../icons/Edit";
 import ArrowLeft from "../../../icons/ArrowLeft";
-import AvatarGruop from "../../../elements/AvatarGruop";
+import AvatarGroup from "../../../elements/AvatarGroup";
 import CoverColor from "../../../elements/CoverColor";
 import ProgressBar from "../../../elements/ProgressBar";
 import CheckBox from "../../../formElemnts/CheckBox";
@@ -249,7 +249,7 @@ const Row = ({
                           to={link(row)}
                           className="!m-0 [&_.avatar-group]:justify-center"
                         >
-                          <AvatarGruop
+                          <AvatarGroup
                             data={row[id]}
                             // handleAvatarGroupClick={() => {
                             //   navigation(
@@ -259,7 +259,7 @@ const Row = ({
                           />
                         </Link>
                       ) : (
-                        <AvatarGruop data={row[id]} />
+                        <AvatarGroup data={row[id]} />
                       )}
                     </>
                   ) : type === "date" && row[id]?.length ? (

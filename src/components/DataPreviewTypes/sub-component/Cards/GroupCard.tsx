@@ -10,7 +10,7 @@ import InitialsDiv from "./GenerateGroupImg";
 import { Link } from "react-router-dom";
 import Pagination from "../Table/Pagination";
 import ImgHelper from "../../../elements/ImgHelper";
-import AvatarGruop from "../../../elements/AvatarGruop";
+import AvatarGroup from "../../../elements/AvatarGroup";
 
 function GroupCard({
   data,
@@ -169,10 +169,10 @@ const Card = ({
                                 to={link(row)}
                                 className="!m-0 [&_.avatar-group]:justify-center"
                               >
-                                <AvatarGruop data={row[id]} />
+                                <AvatarGroup data={row[id]} />
                               </Link>
                             ) : (
-                              <AvatarGruop data={row[id]} />
+                              <AvatarGroup data={row[id]} />
                             )}
                           </>
                         ) : row[id]?.length ? (
