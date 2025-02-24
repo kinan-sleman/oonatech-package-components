@@ -308,7 +308,7 @@ export default function DataPreviewTypesComponent() {
 			type: "avatar_group",
 			align: "center",
 			cell: (content, row, id) => {
-				console.log(row?.users,'row?.users')
+				console.log(row?.users, 'row?.users')
 				return (
 					<Link to={`/iam/groups/${row.id}`}>
 						<AvatarGroup data={row?.users?.map(({ url, name, color }) => ({
@@ -435,10 +435,10 @@ export default function DataPreviewTypesComponent() {
 					? {
 						...data,
 						items: data?.items?.map(
-							({  users, ...group }) => ({
+							({ users, ...group }) => ({
 								...group,
 								"users.name": users,
-								 users,
+								users,
 							})
 						),
 					}

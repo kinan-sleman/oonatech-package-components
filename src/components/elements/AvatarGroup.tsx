@@ -8,7 +8,6 @@ function AvatarGroup({
   data: any[];
   handleAvatarGroupClick?: () => void;
 }) {
-  console.log(data, "data");
   const limitedData = data?.slice(0, 2);
   return (
     <div className="wraper-avatar">
@@ -21,7 +20,7 @@ function AvatarGroup({
               key={index}
               src={avatar.url} 
               name={avatar.name}
-               // color={avatar.color}
+              color={"#fff"}
               backgroundColor={avatar.color}
             />
           ))}
@@ -41,7 +40,7 @@ export default AvatarGroup;
 const IndAvatar = ({
   src,
   name,
-  color,
+  color="#fff",
   backgroundColor,
 }: {
   src?: string;
