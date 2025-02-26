@@ -7,6 +7,7 @@ import {
   MenuItem,
   Select,
   TextField,
+  InputAdornment,
 } from "@mui/material";
 import {
   ChangeEvent,
@@ -20,6 +21,7 @@ import {
 import React from "react";
 import { FlagIcon } from "react-flag-kit";
 import CheckBox from "./CheckBox";
+import AvatarGroup from "../elements/AvatarGroup";
 const MainInput = forwardRef<
   | ((instance: HTMLDivElement | null) => void)
   | RefObject<HTMLDivElement>
@@ -42,10 +44,12 @@ const MainInput = forwardRef<
     | "date"
     | "time";
     px?: number;
+    prefix?: React.ReactNode;
     value?: string | FileList | string[];
     onChange?: (value: string | string[] | FileList, e?: ChangeEvent) => void;
     iconSize?: string;
     required?: boolean;
+    supportImgInDropdown?: boolean;
     options?: readonly { content: string; value: string }[] | undefined;
     onKeyPress?: (e: KeyboardEvent) => void;
     inputBorder?: boolean;
@@ -76,6 +80,8 @@ const MainInput = forwardRef<
       options,
       onKeyPress,
       inputBorder,
+      prefix,
+      supportImgInDropdown = false,
       row,
       flags = [],
       height,
@@ -228,7 +234,18 @@ const MainInput = forwardRef<
                           ) : (
                             ""
                           )}
-                          {item?.content}
+                          {supportImgInDropdown ? (
+                            <div className="flex gap-3 items-center">
+                              <AvatarGroup
+                                data={[{
+                                  name: item?.content,
+                                  color: item?.color,
+                                  url: item?.url,
+                                }]}
+                              />
+                              <span className="ml-2">{item?.content}</span>
+                            </div>
+                          ) : item?.content}
                         </MenuItem>
                       );
                     })}
@@ -362,7 +379,18 @@ const MainInput = forwardRef<
                         style={{ marginRight: 8, marginBottom: 3 }}
                       />
                     )}
-                    {option?.content}
+                    {supportImgInDropdown ? (
+                      <div className="flex gap-3 items-center">
+                        <AvatarGroup
+                          data={[{
+                            name: option?.content,
+                            color: option?.color,
+                            url: option?.url,
+                          }]}
+                        />
+                        <span className="ml-2">{option?.content}</span>
+                      </div>
+                    ) : option?.content}
                   </li>
                 )}
                 fullWidth
@@ -582,6 +610,11 @@ const MainInput = forwardRef<
                 variant="outlined"
                 fullWidth
                 required={required}
+                InputProps={{
+                  startAdornment: prefix ? (
+                    <InputAdornment position="start">{prefix}</InputAdornment>
+                  ) : null,
+                }}
                 inputProps={{
                   min: min,
                   max: max,
@@ -751,6 +784,9 @@ const MainInput = forwardRef<
                       e.animationName === "mui-auto-fill-cancel" &&
                       setIsAutoFill(false),
                     onFocus: () => setIsAutoFill(false),
+                    startAdornment: prefix ? (
+                      <InputAdornment position="start">{prefix}</InputAdornment>
+                    ) : null,
                   }}
                 // inputProps={{
                 //   onAnimationStart:
